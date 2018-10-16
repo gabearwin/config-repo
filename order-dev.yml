@@ -4,11 +4,19 @@ spring:
     username: root
     password: root
     url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf-8&useSSL=false
+  cloud:
+    stream:
+      bindings:
+        myMessage:
+          #对消息进行分组：当前项目部署多个实例时，只会有一个实例处理消息
+          group: order
+          content-type: application/json
   rabbitmq:
-    host: 10.57.211.134
-    port: 5672
-    username: guest
-    password: guest
+      host: 10.57.211.134
+      port: 5672
+      username: guest
+      password: guest
+
 env:
   dev
 girl:
