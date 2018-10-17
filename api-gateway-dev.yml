@@ -11,7 +11,7 @@ zuul:
 
   # 排除某些路由
   ignored-patterns:
-    - /**/product/**
+    - /**/product/listForOrder
 
 #通过[application/routers]可查看所有路由
 management:
